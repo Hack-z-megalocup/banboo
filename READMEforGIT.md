@@ -19,12 +19,12 @@ Prefixを追加することでコミットがPrefix基準でするようにな�
 >https://qiita.com/itosho/items/9565c6ad2ffc24c09364
 
 ## 一,フォーマットに従うべし！！
-Why Format:Formatはコミットメッセージの例参照
-Formatを守って書くことでいつ誰が何をしたのか確認できるのである！！
+Why Format:Formatはコミットメッセージの例参照  
+Formatを守って書くことでいつ誰が何をしたのか確認できるのである！！  
 
 ## 一,issueと紐づけるべし！！
-Why Issue:IssueとはGithubの機能の一つであり、やる事ややるべき事をまとめておくことが出来るのだ！！
-Issueとcommit紐づける事で誰が何を作っているのかが管理しやすくなるのである！！
+Why Issue:IssueとはGithubの機能の一つであり、やる事ややるべき事をまとめておくことが出来るのだ！！  
+Issueとcommit紐づける事で誰が何を作っているのかが管理しやすくなるのである！！  
 
 
 
