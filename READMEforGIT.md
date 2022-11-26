@@ -6,16 +6,16 @@ Why Prefix:Prefixとは、コミットメッセージの先頭に付ける一つ
 Prefixを追加することでコミットがPrefix基準でするようになる＋コミットメッセージが読みやすくなるので良い事だらけなのだ！！
 
 #### 例）
-*fix：バグ修正
-*hotfix：クリティカルなバグ修正
-*add：新規（ファイル）機能追加
-*update：機能修正（バグではない）
-*change：仕様変更
-*clean：整理（リファクタリング等）
-*disable：無効化（コメントアウト等）
-*remove：削除（ファイル）
-*upgrade：バージョンアップ
-*revert：変更取り消し
+*fix：バグ修正  
+*hotfix：クリティカルなバグ修正  
+*add：新規（ファイル）機能追加  
+*update：機能修正（バグではない）  
+*change：仕様変更  
+*clean：整理（リファクタリング等）  
+*disable：無効化（コメントアウト等）  
+*remove：削除（ファイル）  
+*upgrade：バージョンアップ  
+*revert：変更取り消し  
 >https://qiita.com/itosho/items/9565c6ad2ffc24c09364
 
 ## 一,フォーマットに従うべし！！
