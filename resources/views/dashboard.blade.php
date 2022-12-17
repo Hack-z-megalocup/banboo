@@ -21,4 +21,11 @@
             </div>
         </div>
     </div>
+    <?php
+        require_once '../../../app/Http/Controllers/WeatherController.php';
+        
+        $weather = new WeatherController();
+        $data = $weather->index(0);
+        echo $data[0];
+    ?>
 </x-app-layout>
