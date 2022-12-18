@@ -39,7 +39,7 @@ class ConditionController extends Controller
         $user_id = Auth::id();
         $condition = $request->input('condition');
         Conditions::create(['condition' => $condition]);
-        // return view('dashboard');
+        return redirect()->route('dashboard');
     }
 
     /**
