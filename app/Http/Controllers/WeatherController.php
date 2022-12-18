@@ -12,7 +12,7 @@ class WeatherController extends Controller
         $cityName = 'Shimonoseki';
         $apiKey = 'aca786dd36879c4ba6c8dd591e5550f2';
         $url = "http://api.openweathermap.org/data/2.5/forecast?units=metric&lang=ja&q=$cityName&appid=$apiKey";
-       
+        
         $method = "GET";
 
         $client = new Client();
@@ -21,12 +21,16 @@ class WeatherController extends Controller
 
         $data = $response->getBody();
         $data = json_decode($data, true);
-        // dd($data['list']);
+        dd($data['list']);
 
-        return view('dashboard', [
-            'list' => $data['list']
-        ]);
+         return view('dashboard', [
+             'list' => $data['list']
+         ]);
 
+        //$list = ['list' => $data['list']]
+
+        //return $list;
+        
         // {{ $data['list'][0]['dt'] }} -> 1671332400
 
 

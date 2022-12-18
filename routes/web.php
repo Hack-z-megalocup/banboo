@@ -5,6 +5,7 @@ use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,10 @@ Route::get('/test', function () {
 Route::get('/weather', [WeatherController::class, 'index']);
 
 Route::get('/dashboard', [WeatherController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/dashboard', function() {
+//   return view('dashboard', [WeatherController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+// });
 
 Route::get('/chartjs', function() {
   return view('chartjs');

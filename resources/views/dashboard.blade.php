@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <?php //dd($list[0]['weather'][0]['description']); ?>
+    <?php dd($list[0]['weather'][0]['description']); ?>
     
     {{ $list[0]['weather'][0]['description'] }}
 
