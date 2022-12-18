@@ -1,3 +1,5 @@
+<?php dd($list); ?>
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -14,11 +16,5 @@
             </div>
         </div>
     </div>
-    <?php
-        require_once '../../../app/Http/Controllers/WeatherController.php';
-        
-        $weather = new WeatherController();
-        $data = $weather->index(0);
-        echo $data[0];
-    ?>
+    
 </x-app-layout>
