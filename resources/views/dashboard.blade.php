@@ -21,4 +21,9 @@
             </div>
         </div>
     </div>
+
+    <?php //dd($list[0]['weather'][0]['description']); ?>
+    
+    {{ $list[0]['weather'][0]['description'] }}
+
 </x-app-layout>
