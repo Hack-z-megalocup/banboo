@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Conditions;
+use Auth;
 
 class ConditionController extends Controller
 {
@@ -34,14 +36,9 @@ class ConditionController extends Controller
      */
     public function store(Request $request)
     {
-        if($request = 0){
-            return view('dashboard');
-        }else if($request = 1){
-            return(view('dashboard'));
-        }else{
-            return(view('dashboard'));
-        }
-        return redirect()->route('dashboardmkdir resources/views/tweet');
+        $user_id = Auth::id();
+        $condition = $request->input('condition');
+        Conditions::create(['condition' => $condition]);
     }
 
     /**
