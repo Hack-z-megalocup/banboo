@@ -20,9 +20,6 @@
                                 <line class="c" x1="29.17" y1="15.17" x2="34.83" y2="20.83"/>
                             </svg>
                         </button>
-                    </form>
-                    <form action="{{ route('condition.store') }}" method="POST" >
-                        @csrf
                         <input type="hidden"name="condition"value ="1">
                         <button type="submit" class="mr-2 ml-3 " >
                             <svg class="h-12 w-12" > <defs><style>.a,.b,.c{fill:none;}.b,.c{stroke:#000;stroke-miterlimit:10;stroke-width:2px;}.c{stroke-linecap:round;}</style></defs>
@@ -32,9 +29,6 @@
                                     <path class="c" d="M33.8,36a10,10,0,0,0-19.6,0"/> 
                             </svg>
                         </button>
-                    </form>
-                    <form action="{{ route('condition.store') }}" method="POST" >
-                        @csrf
                         <input type="hidden"name="condition"value ="2">
                         <button type="submit" class="mr-2 ml-2 " >
                             <svg class="h-10 w-10" ><defs><style>.a,.b,.c{fill:none;}.b,.c{stroke:#000;stroke-miterlimit:10;stroke-width:2px;}.c{stroke-linecap:round;}</style></defs>
