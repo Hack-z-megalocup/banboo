@@ -21,6 +21,7 @@ class WeatherController extends Controller
 
         $data = $response->getBody();
         $data = json_decode($data, true);
+        // dd($data['list']);
 
         return view('dashboard', [
             'list' => $data['list']

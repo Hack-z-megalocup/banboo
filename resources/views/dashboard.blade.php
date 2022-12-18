@@ -1,5 +1,3 @@
-<?php dd($list); ?>
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -23,5 +21,9 @@
             </div>
         </div>
     </div>
+
+    <?php //dd($list[0]['weather'][0]['description']); ?>
     
+    {{ $list[0]['weather'][0]['description'] }}
+
 </x-app-layout>
