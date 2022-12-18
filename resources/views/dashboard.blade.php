@@ -13,7 +13,7 @@
                     @if (4 <= $time && $time <= 12) 
                         <p>{{ Auth::user()->name }}さん おはようございます</p>
                     @elseif (12 <= $time && $time <= 18) 
-                        <p>{{ Auth::user()->name }}さん こんにちわ</p>
+                    <p>{{ Auth::user()->name }}さん こんにちわ</p>
                     @else
                         <p>{{ Auth::user()->name }}さん こんばんわ</p>
                     @endif
@@ -23,7 +23,11 @@
     </div>
 
     <?php //dd($list[0]['weather'][0]['description']); ?>
-    
-    {{ $list[0]['weather'][0]['description'] }}
-
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                {{ $list[0]['weather'][0]['description'] }}
+            </div>
+        </div>
+    </div>
 </x-app-layout>
