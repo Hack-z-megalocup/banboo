@@ -34,7 +34,7 @@ Route::get('/dashboard', [WeatherController::class, 'index'])->middleware(['auth
 // });
 
 Route::get('/chartjs', function() {
-  return view('chartjs');
+  return view('chartjs',[WeatherController::class, 'index']);
 });
 
 Route::middleware('auth')->group(function () {

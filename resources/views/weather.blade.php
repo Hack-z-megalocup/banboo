@@ -3,13 +3,17 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content=Type">
 </head>
-<body>
-<?php
-    use App\Http\Controllers;
-
-    // $weather = new WeatherController();
-    $data = $weather->index(0);
-    echo $data[0];
-    ?>
+<script>
+ let apiData =  {{$list}}
+ console.log(apiData);
+//const ctx = document.getElementById("myChart").getContext("2d");
+//const myChart = new Chart(ctx, {
+//### 中略 ###
+//datasets: [
+// <?= $list ?>
+//}
+// chatjsリロード処理
+</script
+><body>
 </body>
 </html>
