@@ -40,7 +40,6 @@ class ConditionController extends Controller
         $condition = $request->input('condition');
         Conditions::create(['condition' => $condition]);
         return redirect()->route('dashboard');
-        // return view('dashboard');
     }
 
     /**
