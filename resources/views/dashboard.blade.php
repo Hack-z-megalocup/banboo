@@ -1,3 +1,7 @@
+<head>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -21,9 +25,38 @@
             </div>
         </div>
     </div>
+<canvas id='myChart'></canvas>
 
-    <?php //dd($list[0]['weather'][0]['description']); ?>
-    
-    {{ $list[0]['weather'][0]['description'] }}
+<script>
+
+<?php $data = json_encode($list);?>
+
+ let apiData = JSON.parse('<?= $data ?>');
+ var pressureArray = [];
+ for(let key in apiData){
+   let apikey = (apiData[key]);
+  pressureArray.push(apikey['main']['pressure']);
+ }
+ 
+ console.log(window.cjs);
+console.log(pressureArray);
+
+
+const ctx = document.getElementById("myChart").getContext("2d");
+const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+        labels: ["月", "火曜", "水曜", "木曜", "金曜", "土曜", "日曜"],
+        datasets: [
+            {
+                label: "data 1",
+                data: pressureArray,
+                borderColor: "rgb(75, 192, 192)",
+                backgroundColor: "rgba(75, 192, 192, 0.5)",
+            },
+        ],
+    }
+});
+</script>
 
 </x-app-layout>

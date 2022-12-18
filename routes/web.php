@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConditionController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,8 +33,12 @@ Route::get('/weather', [WeatherController::class, 'index']);
 
 Route::get('/dashboard', [WeatherController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+// Route::get('/dashboard', function() {
+//   return view('dashboard', [WeatherController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+// });
+
 Route::get('/chartjs', function() {
-  return view('chartjs');
+  return view('chartjs',[WeatherController::class, 'index']);
 });
 
 Route::middleware('auth')->group(function () {
