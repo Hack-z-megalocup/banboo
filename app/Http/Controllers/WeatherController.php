@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class WeatherController extends Controller
 {
-    public function index($index) {
+    public function index() {
         
         $cityName = 'Shimonoseki';
         $apiKey = 'aca786dd36879c4ba6c8dd591e5550f2';
@@ -21,9 +21,17 @@ class WeatherController extends Controller
 
         $data = $response->getBody();
         $data = json_decode($data, true);
-        $json = response()->json($data);
+
+        return view('dashboard', [
+            'list' => $data['list']
+        ]);
+
+        // {{ $data['list'][0]['dt'] }} -> 1671332400
+
+
+        //$json = response()->json($data);
         
-        return array($data['list'][$index]['dt_txt'],$data['list'][$index]['weather'][$index]['description'],$data['list'][$index]['main']['temp'],$data['list'][$index]['main']['pressure']);
+        //return array($data['list'][0]['dt_txt'],$data['list'][0]['weather'][0]['description'],$data['list'][0]['main']['temp'],$data['list'][0]['main']['pressure']);
     }
 }
 
